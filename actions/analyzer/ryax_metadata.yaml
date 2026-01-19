@@ -10,8 +10,8 @@ spec:
   resources:
     cpu: 2
     memory: 4G
-  dependencies:
-  - pythonPackages.pandas
+  # dependencies:
+  # - pythonPackages.pandas
   inputs:
   - help: A parquet file to analyze
     human_name: Input Data (.parquet)
