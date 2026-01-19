@@ -1,0 +1,24 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: analyzer
+  human_name: SCADA window analyzer
+  description: "Analyze a window into SCADA"
+  type: python3
+  version: "0.1"
+  logo: search-icon.jpg
+  resources:
+    cpu: 2
+    memory: 4G
+  dependencies:
+  - pandas
+  inputs:
+  - help: A parquet file to analyze
+    human_name: Input Data (.parquet)
+    name: data
+    type: file
+  outputs:
+  - help: JSON result of the analysis
+    human_name: Results (json string)
+    name: results
+    type: longstring
