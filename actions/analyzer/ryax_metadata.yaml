@@ -10,7 +10,6 @@ spec:
   resources:
     cpu: 2
     memory: 4G
-  dependencies:
   inputs:
   - help: A parquet file to analyze
     human_name: Input Data (.parquet)
