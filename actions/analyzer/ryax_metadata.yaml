@@ -5,11 +5,13 @@ spec:
   human_name: SCADA window analyzer
   description: "Analyze a window into SCADA"
   type: python3
-  version: "0.2"
+  version: "0.2.1"
   logo: search-icon.jpg
   resources:
     cpu: 2
     memory: 4G
+  dependencies:
+  - pandaPackages.pandas
   inputs:
   - help: A parquet file to analyze
     human_name: Input Data (.parquet)
