@@ -6,7 +6,7 @@ from random import random
 def analyse(df:pd.DataFrame)->dict:
     # Dummy 'analysis'
     anomalous = random()<.01
-    return {"start":df.index.start, "end":df.index.end, "anomalous":anomalous}
+    return {"start":df.index.start, "stop":df.index.stop, "anomalous":anomalous} #type:ignore
 
 def handle(request: dict)->dict:
     # Get the directory with window .parquet
