@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-import pandas as pd
+# import pandas as pd
 
 def handle(request: dict)->dict:
     # Get the directory with the results .json
@@ -13,5 +13,5 @@ def handle(request: dict)->dict:
             res:dict = json.load(resf)
             if res["anomalous"]:
                 results.append(res)
-    
+
     return {"report":json.dumps(results)}
