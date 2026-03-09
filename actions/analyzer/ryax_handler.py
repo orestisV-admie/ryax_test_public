@@ -18,7 +18,7 @@ def handle(request: dict)->dict:
     for file in in_dir.glob("*.parquet"):
         df = pd.read_parquet(file)
         res = analyse(df)
-        with open(out_dir.joinpath(f"{file.with_stem}.json"), "w") as jfile:
+        with open(out_dir.joinpath(f"{file.stem}.json"), "w") as jfile:
             json.dump(res, jfile)
     
     return {"results":out_dir.absolute().as_posix()}
