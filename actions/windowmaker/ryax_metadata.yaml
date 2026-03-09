@@ -1,9 +1,9 @@
 apiVersion: "ryax.tech/v2.0"
 kind: Processor
 spec:
-  id: analyzer
-  human_name: SCADA window analyzer
-  description: "Analyze a window into SCADA"
+  id: windowmaker
+  human_name: SCADA data partitioner
+  description: "Split SCADA into windows"
   type: python3
   version: "0.1"
   logo: search-icon.jpg
@@ -13,12 +13,12 @@ spec:
   # dependencies:
   # - pandaPackages.pandas
   inputs:
+  - help: A parquet file to analyze
+    human_name: Input Data (.parquet)
+    name: data
+    type: file
+  outputs:
   - help: Directory of Windowed Data
     human_name: Windowed Data (directory)
     name: windows
-    type: directory
-  outputs:
-  - help: Directory of Analysis Results
-    human_name: .json results (directory)
-    name: results
     type: directory

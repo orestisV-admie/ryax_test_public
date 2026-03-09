@@ -1,8 +1,8 @@
 apiVersion: "ryax.tech/v2.0"
 kind: Processor
 spec:
-  id: analyzer
-  human_name: SCADA window analyzer
+  id: collator
+  human_name: Analysis results collator
   description: "Analyze a window into SCADA"
   type: python3
   version: "0.1"
@@ -13,12 +13,12 @@ spec:
   # dependencies:
   # - pandaPackages.pandas
   inputs:
-  - help: Directory of Windowed Data
-    human_name: Windowed Data (directory)
-    name: windows
-    type: directory
-  outputs:
   - help: Directory of Analysis Results
     human_name: .json results (directory)
     name: results
     type: directory
+  outputs:
+  - help: JSON collated analysis results
+    human_name: Collated Results (json longstring)
+    name: report
+    type: longstring
