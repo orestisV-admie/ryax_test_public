@@ -1,5 +1,5 @@
 # Analyzer Action
 
-**Input:** directory with windows in small .parquet files
+**Input:** directory with data windows into small .parquet files
 
 **Output:** directory with analysis results in .json files

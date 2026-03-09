@@ -1,5 +1,5 @@
 # Collator Action
 
-**Input:** directory with windows in small .parquet files
+**Input:** directory with analysis results in .json files
 
-**Output:** .json file with collated analysis results
+**Output:** .json longstring with collated analysis results
